@@ -8,6 +8,10 @@
     "node": ">=20"
   },
   "scripts": {
-    "ui:publish": "pnpm --filter @adhdesigns/ui publish"
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r clean",
+    "ui:publish": "pnpm --filter @adhdesigns/ui publish",
+    "mcp-kit:publish": "pnpm --filter @adhdesigns/mcp-kit publish"
   }
 }

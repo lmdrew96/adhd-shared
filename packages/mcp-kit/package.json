@@ -1,0 +1,43 @@
+{
+  "name": "@adhdesigns/mcp-kit",
+  "version": "0.1.0",
+  "description": "Shared toolkit for building ADHDesigns MCP servers on @modelcontextprotocol/sdk.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./stdio": {
+      "types": "./dist/stdio.d.ts",
+      "import": "./dist/stdio.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "typecheck:examples": "tsc --noEmit --project tsconfig.examples.json",
+    "smoke": "pnpm build && node examples/runtime-smoke.mjs",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.25.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.5.0",
+    "zod": "^4.3.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
