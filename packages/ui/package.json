@@ -1,0 +1,21 @@
+{
+  "name": "@adhdesigns/ui",
+  "version": "0.1.0",
+  "description": "ADHDesigns shared UI assets — Tailwind v4 + shadcn semantic token themes.",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "module",
+  "sideEffects": [
+    "./themes/*.css"
+  ],
+  "files": [
+    "themes"
+  ],
+  "exports": {
+    "./themes/brand.css": "./themes/brand.css",
+    "./themes/lab-notebook.css": "./themes/lab-notebook.css"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "adhd-shared",
+  "private": true,
+  "version": "0.0.0",
+  "description": "ADHDesigns shared packages — UI themes, MCP kit, Clerk helpers.",
+  "packageManager": "pnpm@10.17.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "ui:publish": "pnpm --filter @adhdesigns/ui publish"
+  }
+}
