@@ -1,0 +1,53 @@
+{
+  "name": "@adhdesigns/clerk",
+  "version": "0.1.0",
+  "description": "Shared Clerk helpers for ADHDesigns Neon+Clerk apps — middleware, JWT verification, Next.js server helpers, and Neon user-sync.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./sync": {
+      "types": "./dist/sync.d.ts",
+      "import": "./dist/sync.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "typecheck:examples": "tsc --noEmit --project tsconfig.examples.json",
+    "smoke": "pnpm build && node examples/runtime-smoke.mjs",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "@clerk/backend": "^1.0.0 || ^2.0.0",
+    "@clerk/nextjs": "^5.0.0 || ^6.0.0",
+    "drizzle-orm": "^0.30.0 || ^0.40.0 || ^0.41.0 || ^0.42.0 || ^0.43.0 || ^0.44.0",
+    "next": "^14.0.0 || ^15.0.0 || ^16.0.0"
+  },
+  "peerDependenciesMeta": {
+    "drizzle-orm": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@clerk/backend": "^2.0.0",
+    "@clerk/nextjs": "^6.0.0",
+    "@types/node": "^20.11.0",
+    "drizzle-orm": "^0.44.0",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "typescript": "^5.5.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

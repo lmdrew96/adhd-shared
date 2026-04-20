@@ -12,6 +12,7 @@
     "typecheck": "pnpm -r typecheck",
     "clean": "pnpm -r clean",
     "ui:publish": "pnpm --filter @adhdesigns/ui publish",
-    "mcp-kit:publish": "pnpm --filter @adhdesigns/mcp-kit publish"
+    "mcp-kit:publish": "pnpm --filter @adhdesigns/mcp-kit publish",
+    "clerk:publish": "pnpm --filter @adhdesigns/clerk publish"
   }
 }
